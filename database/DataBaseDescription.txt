@@ -1,0 +1,78 @@
+
+Basic Details
+	- id - auto incremented index
+	- FacultyID
+	- Name
+	- DoB
+	- Address
+	- Phone number
+	- Email ID@msrit.edu
+	- Role in Institution (Drop down)
+	- Photo/Profile Picture - link to file on server
+	- Gender
+	- Website
+	- Year of joining
+
+
+
+Educational Qualification Table:
+		- id (auto_inc)
+		- FacultyID
+		-Degree
+			-Year of Passing
+			-University
+			-Discipline
+			-% or CGPA (optional)
+		-Masters Degree
+		-Research 
+		-Post Research (If Any)
+		
+Experience Table:
+	- id (auto_inc)
+	- FacultyID
+	- Non-Teaching Experience
+	- Teaching Experience
+	- In MSRIT and Outside
+
+Conference/Workshop Attended:
+	-Title
+	-Duration/dates
+	-Where/location
+	-Report link
+
+Requests for Training
+	-Institute
+	-Area
+	-Duration
+	-Location
+	-Topic
+	
+
+Industry Interaction: 
+	-Name of industry
+	-Duration
+	-Link
+
+Project Funding
+	-Project Title
+	-Funding Agency
+	-Duration
+	-Amount
+
+Project Guidance
+	-Project Title
+	-Area
+	-Type: UG/PG/PHD
+	-Number of students
+	-year
+		
+
+Publications Table:
+		- id (auto_inc)
+		- FacultyID
+		- year of publication
+		- Title
+		- Type - Conference/Journal/Book/Book Chapter
+		- Link 
+		- //Impact Factor - float
+		- Research Area

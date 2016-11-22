@@ -1,0 +1,31 @@
+
+.profilepic {
+    background-size: cover;
+    height: 140px;
+    width: 140px;
+}
+
+.table-padding td{
+    padding: 3px 8px;
+}
+
+.announcements
+{
+    max-height: 250px;
+    overflow-y: scroll;
+    margin-right: -15px;
+
+}
+
+blockquote {
+    padding: 0px;
+    font-family:  Georgia, "Times New Roman", Times, serif;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before{
+
+    color: #888a85;
+    font-size:60px;
+    content: open-quote;
+}
