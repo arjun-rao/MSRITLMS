@@ -13,7 +13,8 @@ class AddRolesToUserTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('role')->after('password');
+            $table->string('role',255)->after('password');            
+            $table->integer('semester')->after('role');
         });
     }
 

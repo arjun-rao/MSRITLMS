@@ -13,33 +13,36 @@ class CreateMsritwebDatabase extends Migration {
          public function up()
          {
             
-	    /**
-	     * Table: announcements
+         /**
+	     * Table: users
 	     */
-	    Schema::create('announcements', function($table) {
+	    Schema::create('users', function($table) {
                 $table->increments('id')->unsigned();
-                $table->string('content', 255);
-                $table->string('parent_code', 255)->nullable();
-                $table->string('creator', 255);
-                $table->string('status', 255);
+                $table->string('name', 255);
+                $table->string('username', 255);
+                $table->string('email', 255);
+                $table->string('password', 60);
+                $table->string('role', 255);
+                $table->integer('semester');
+                $table->string('remember_token', 100)->nullable();
                 $table->timestamp('created_at')->default("0000-00-00 00:00:00");
                 $table->timestamp('updated_at')->default("0000-00-00 00:00:00");
-                $table->index('announcements_parent_code_foreign');
+                $table->index('users_email_unique');
+                $table->index('users_username_unique');
             });
 
-
-	    /**
-	     * Table: course_instructor
+        /**
+	     * Table: departments
 	     */
-	    Schema::create('course_instructor', function($table) {
-                $table->string('course', 255);
-                $table->string('instructor', 255);
-                $table->index('course_instructor_course_foreign');
-                $table->index('course_instructor_instructor_foreign');
+	    Schema::create('departments', function($table) {
+                $table->increments('department_code', 255);
+                $table->string('name', 255);
+                $table->string('hod', 255);
+                $table->index('departments_department_code_unique');
             });
 
 
-	    /**
+         /**
 	     * Table: courses
 	     */
 	    Schema::create('courses', function($table) {
@@ -57,13 +60,17 @@ class CreateMsritwebDatabase extends Migration {
 
 
 	    /**
-	     * Table: departments
+	     * Table: announcements
 	     */
-	    Schema::create('departments', function($table) {
-                $table->increments('department_code', 255);
-                $table->string('name', 255);
-                $table->string('hod', 255);
-                $table->index('departments_department_code_unique');
+	    Schema::create('announcements', function($table) {
+                $table->increments('id')->unsigned();
+                $table->string('content', 255);
+                $table->string('parent_code', 255)->nullable();
+                $table->string('creator', 255);
+                $table->string('status', 255);
+                $table->timestamp('created_at')->default("0000-00-00 00:00:00");
+                $table->timestamp('updated_at')->default("0000-00-00 00:00:00");
+                $table->index('announcements_parent_code_foreign');
             });
 
 
@@ -89,6 +96,24 @@ class CreateMsritwebDatabase extends Migration {
                 $table->index('instructors_username_unique');
                 $table->index('instructors_department_code_unique');
             });
+            
+        /**
+	     * Table: course_instructor
+	     */
+	    Schema::create('course_instructor', function($table) {
+                $table->string('course', 255);
+                $table->string('instructor', 255);
+                $table->index('course_instructor_course_foreign');
+                $table->index('course_instructor_instructor_foreign');
+            });
+
+
+	   
+
+	   
+
+
+	    
 
 
 	    /**
@@ -177,24 +202,7 @@ class CreateMsritwebDatabase extends Migration {
             });
 
 
-	    /**
-	     * Table: users
-	     */
-	    Schema::create('users', function($table) {
-                $table->increments('id')->unsigned();
-                $table->string('name', 255);
-                $table->string('username', 255);
-                $table->string('email', 255);
-                $table->string('password', 60);
-                $table->string('role', 255);
-                $table->integer('semester');
-                $table->string('remember_token', 100)->nullable();
-                $table->timestamp('created_at')->default("0000-00-00 00:00:00");
-                $table->timestamp('updated_at')->default("0000-00-00 00:00:00");
-                $table->index('users_email_unique');
-                $table->index('users_username_unique');
-            });
-
+	   
 
          }
 
