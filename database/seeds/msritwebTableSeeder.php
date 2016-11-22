@@ -3,81 +3,124 @@
 class msritwebTableSeeder extends Seeder {
     public function run()
     {
-        
-        DB::table('announcements')->insert(array(
-            
+        DB::table('users')->insert(array(
+
             array(
-                'id' => 13,
-                'content' => 'Course Syllabus updated.',
-                'parent_code' => 'IS332',
-                'creator' => 'isehod',
-                'status' => 'published',
-                'created_at' => '2015-08-12 20:53:29',
-                'updated_at' => '2015-08-12 20:53:29',
+                'id' => 1,
+                'name' => 'Arjun Rao',
+                'username' => '1MS14IS018',
+                'email' => 'test@example.org',
+                'password' => '$2y$10$uiFHS5.hvKARt/JoV07j8OcyVktDC9CDHFP00N4qlptUnvX8aCwxy',
+                'role' => 'student',
+                'semester' => 3,
+                'remember_token' => 'a2PFoy2R2OyfAJBG2Zx47gZM7XkK5NytplJ0jyDA43wGTCb8QCyKO9Dckooz',
+                'created_at' => '2015-07-31 00:30:23',
+                'updated_at' => '2016-11-16 06:26:57',
             ),
 
             array(
-                'id' => 14,
-                'content' => 'Time table will be announced on Monday, 17.8.2015',
-                'parent_code' => 'IS315',
-                'creator' => 'isehod',
-                'status' => 'published',
-                'created_at' => '2015-08-12 22:24:22',
-                'updated_at' => '2015-08-12 22:24:32',
+                'id' => 3,
+                'name' => 'Dr. Vijaya Kumar B P',
+                'username' => 'isehod',
+                'email' => 'hod_is@msrit.edu',
+                'password' => '$2y$10$2gRaH/6Dsa.iTS3uRnWnPeXbJWobFNk8VoJp1csUb8qnSIDgIXyZG',
+                'role' => 'hod',
+                'semester' => 0,
+                'remember_token' => 'WulQJrp7XwRs0wnDMklJFE9DcIKu2CclcCiBA03IGWuaXACCi5dJqTonBC1e',
+                'created_at' => '2015-08-01 21:16:35',
+                'updated_at' => '2016-11-22 07:53:05',
             ),
 
             array(
-                'id' => 15,
-                'content' => 'VOISE- Tech Fest <SCRIPT>
-20th November 2015',
-                'parent_code' => NULL,
-                'creator' => 'isehod',
-                'status' => 'published',
-                'created_at' => '2015-11-19 21:59:58',
-                'updated_at' => '2015-11-19 21:59:58',
+                'id' => 20,
+                'name' => 'Mrs. Sunitha R.S',
+                'username' => 'sunitha',
+                'email' => 'sunithars@msrit.edu',
+                'password' => '$2y$10$9TusodNX76m9bEPMa.w7T.zAqZMfdt3V9sbSir5chu7jQebJzSIIW',
+                'role' => 'faculty',
+                'semester' => 0,
+                'remember_token' => 'UhgGMsITW07GzxOxbGArYmPEWoldhTw7EdpPADI4xR87L8toCYsNbrLlcsc5',
+                'created_at' => '2015-08-09 22:31:43',
+                'updated_at' => '2015-08-13 14:27:08',
+            ),
+
+            array(
+                'id' => 22,
+                'name' => 'Mrs. Lincy Meera Mathews',
+                'username' => 'lincy',
+                'email' => 'lincymm99@gmail.com',
+                'password' => '$2y$10$0JPEkeTIAkvDbnP4rIjcD.zEIAsGT1lDwLtu376L4QK4OzQ1H9Jmy',
+                'role' => 'faculty',
+                'semester' => 0,
+                'remember_token' => '1GFZTvilmr4fVxaCvPKrq0Md19Jr4LPJUfLPQRdeAhxFejRtnZNAKIOfuMH8',
+                'created_at' => '2015-08-10 00:21:58',
+                'updated_at' => '2015-08-12 22:42:10',
+            ),
+
+            array(
+                'id' => 24,
+                'name' => 'Shashidhara H S',
+                'username' => 'shashidhara',
+                'email' => 'shashi@msrit.edu',
+                'password' => '$2y$10$mXlbO/L/EtEkB3mB5D/EeuSgVnRyk1N77VNSuSbqsMa00wU8UF7R.',
+                'role' => 'faculty',
+                'semester' => 0,
+                'remember_token' => 'fHIB3Etx9bvEeK3cL5EqOAsQEzJSQEgU0PszMMwEWHPBDNFmVPO9409mtiXh',
+                'created_at' => '2015-08-12 20:48:31',
+                'updated_at' => '2015-08-12 21:14:45',
+            ),
+
+            array(
+                'id' => 25,
+                'name' => 'Mrs. Deepthi. K',
+                'username' => 'deeptik',
+                'email' => 'deepthik@msrit.edu',
+                'password' => '$2y$10$zZT3CHbghHyfqtvBPxirF.YD5VU7wRybQj4Jt4yu0L0fIQSXAlovO',
+                'role' => 'faculty',
+                'semester' => 0,
+                'remember_token' => 'VKJkahlLtxRY4awUtC6Gts1RPL9RPrwlSBXLlfUwDucF6Xy9cX3Do62yu6T3',
+                'created_at' => '2015-08-12 21:10:36',
+                'updated_at' => '2015-08-12 21:16:45',
+            ),
+
+            array(
+                'id' => 26,
+                'name' => 'Student1',
+                'username' => '1MS13IS001',
+                'email' => 'test@gmail.com',
+                'password' => '$2y$10$Cvp1sqKJ8Fra5LNHY/qZquknfiwvE9S2sBa1n5yaJCyrxE/oOQT5K',
+                'role' => 'student',
+                'semester' => 3,
+                'remember_token' => 'hoTmbbbHzbQbBaPuQKpNeJ6S8TkRQUCtzpxSQUNNZMJmPo24PgqQMiCkI1jC',
+                'created_at' => '2015-11-19 21:55:33',
+                'updated_at' => '2015-11-19 21:59:28',
+            ),
+
+            array(
+                'id' => 27,
+                'name' => 'testuser',
+                'username' => 'testuser',
+                'email' => 't2est@gmail.com',
+                'password' => '$2y$10$WZMDUGRkxQEpOIpy5mWf0.0LYsJ/kpBv9WzU3fPSXJlMY48OScSAa',
+                'role' => 'hod',
+                'semester' => 0,
+                'remember_token' => 't8xMdaFrQAQneJTLsNJLz0S10JiAerfqJf0Y61HgHxpzfD7LIrci0S5cBlg9',
+                'created_at' => '2015-12-14 17:16:35',
+                'updated_at' => '2015-12-14 17:32:25',
             ),
 
         ));
-        DB::table('course_instructor')->insert(array(
-            
-            array(
-                'course' => 'IS332',
-                'instructor' => 'shashidhara',
-            ),
+        DB::table('departments')->insert(array(
 
             array(
-                'course' => 'IS333',
-                'instructor' => 'deeptik',
-            ),
-
-            array(
-                'course' => 'IS333L',
-                'instructor' => 'deeptik',
-            ),
-
-            array(
-                'course' => 'IS314',
-                'instructor' => 'isehod',
-            ),
-
-            array(
-                'course' => 'IS315',
-                'instructor' => 'lincy',
-            ),
-
-            array(
-                'course' => 'IS315',
-                'instructor' => 'sunitha',
-            ),
-
-            array(
-                'course' => 'IS521A',
-                'instructor' => 'deeptik',
-            ),
+                'department_code' => 'IS',
+                'name' => 'Information Science and Engineering',
+                'hod' => 'isehod',
+            )
 
         ));
         DB::table('courses')->insert(array(
-            
+
             array(
                 'course_code' => 'IS314',
                 'department_code' => 'IS',
@@ -153,17 +196,8 @@ Pre-requisites: CS101/CS201
             ),
 
         ));
-        DB::table('departments')->insert(array(
-            
-            array(
-                'department_code' => 'IS',
-                'name' => 'Information Science and Engineering',
-                'hod' => 'isehod',
-            )
-
-        ));
         DB::table('instructors')->insert(array(
-            
+
             array(
                 'username' => 'deeptik',
                 'department_code' => 'IS',
@@ -252,6 +286,78 @@ Pre-requisites: CS101/CS201
                 'website' => NULL,
                 'created_at' => '2015-08-09 22:31:43',
                 'updated_at' => '2015-08-09 22:33:30',
+            ),
+
+        ));
+        DB::table('announcements')->insert(array(
+            
+            array(
+                'id' => 13,
+                'content' => 'Course Syllabus updated.',
+                'parent_code' => 'IS332',
+                'creator' => 'isehod',
+                'status' => 'published',
+                'created_at' => '2015-08-12 20:53:29',
+                'updated_at' => '2015-08-12 20:53:29',
+            ),
+
+            array(
+                'id' => 14,
+                'content' => 'Time table will be announced on Monday, 17.8.2015',
+                'parent_code' => 'IS315',
+                'creator' => 'isehod',
+                'status' => 'published',
+                'created_at' => '2015-08-12 22:24:22',
+                'updated_at' => '2015-08-12 22:24:32',
+            ),
+
+            array(
+                'id' => 15,
+                'content' => 'VOISE- Tech Fest <SCRIPT>
+20th November 2015',
+                'parent_code' => NULL,
+                'creator' => 'isehod',
+                'status' => 'published',
+                'created_at' => '2015-11-19 21:59:58',
+                'updated_at' => '2015-11-19 21:59:58',
+            ),
+
+        ));
+        DB::table('course_instructor')->insert(array(
+            
+            array(
+                'course' => 'IS332',
+                'instructor' => 'shashidhara',
+            ),
+
+            array(
+                'course' => 'IS333',
+                'instructor' => 'deeptik',
+            ),
+
+            array(
+                'course' => 'IS333L',
+                'instructor' => 'deeptik',
+            ),
+
+            array(
+                'course' => 'IS314',
+                'instructor' => 'isehod',
+            ),
+
+            array(
+                'course' => 'IS315',
+                'instructor' => 'lincy',
+            ),
+
+            array(
+                'course' => 'IS315',
+                'instructor' => 'sunitha',
+            ),
+
+            array(
+                'course' => 'IS521A',
+                'instructor' => 'deeptik',
             ),
 
         ));
@@ -831,112 +937,6 @@ Where car and fruit are classes, and Nano and Apple are their respective objects
             ),
 
         ));
-        DB::table('users')->insert(array(
-            
-            array(
-                'id' => 1,
-                'name' => 'Arjun Rao',
-                'username' => '1MS14IS018',
-                'email' => 'test@example.org',
-                'password' => '$2y$10$uiFHS5.hvKARt/JoV07j8OcyVktDC9CDHFP00N4qlptUnvX8aCwxy',
-                'role' => 'student',
-                'semester' => 3,
-                'remember_token' => 'a2PFoy2R2OyfAJBG2Zx47gZM7XkK5NytplJ0jyDA43wGTCb8QCyKO9Dckooz',
-                'created_at' => '2015-07-31 00:30:23',
-                'updated_at' => '2016-11-16 06:26:57',
-            ),
 
-            array(
-                'id' => 3,
-                'name' => 'Dr. Vijaya Kumar B P',
-                'username' => 'isehod',
-                'email' => 'hod_is@msrit.edu',
-                'password' => '$2y$10$2gRaH/6Dsa.iTS3uRnWnPeXbJWobFNk8VoJp1csUb8qnSIDgIXyZG',
-                'role' => 'hod',
-                'semester' => 0,
-                'remember_token' => 'WulQJrp7XwRs0wnDMklJFE9DcIKu2CclcCiBA03IGWuaXACCi5dJqTonBC1e',
-                'created_at' => '2015-08-01 21:16:35',
-                'updated_at' => '2016-11-22 07:53:05',
-            ),
-
-            array(
-                'id' => 20,
-                'name' => 'Mrs. Sunitha R.S',
-                'username' => 'sunitha',
-                'email' => 'sunithars@msrit.edu',
-                'password' => '$2y$10$9TusodNX76m9bEPMa.w7T.zAqZMfdt3V9sbSir5chu7jQebJzSIIW',
-                'role' => 'faculty',
-                'semester' => 0,
-                'remember_token' => 'UhgGMsITW07GzxOxbGArYmPEWoldhTw7EdpPADI4xR87L8toCYsNbrLlcsc5',
-                'created_at' => '2015-08-09 22:31:43',
-                'updated_at' => '2015-08-13 14:27:08',
-            ),
-
-            array(
-                'id' => 22,
-                'name' => 'Mrs. Lincy Meera Mathews',
-                'username' => 'lincy',
-                'email' => 'lincymm99@gmail.com',
-                'password' => '$2y$10$0JPEkeTIAkvDbnP4rIjcD.zEIAsGT1lDwLtu376L4QK4OzQ1H9Jmy',
-                'role' => 'faculty',
-                'semester' => 0,
-                'remember_token' => '1GFZTvilmr4fVxaCvPKrq0Md19Jr4LPJUfLPQRdeAhxFejRtnZNAKIOfuMH8',
-                'created_at' => '2015-08-10 00:21:58',
-                'updated_at' => '2015-08-12 22:42:10',
-            ),
-
-            array(
-                'id' => 24,
-                'name' => 'Shashidhara H S',
-                'username' => 'shashidhara',
-                'email' => 'shashi@msrit.edu',
-                'password' => '$2y$10$mXlbO/L/EtEkB3mB5D/EeuSgVnRyk1N77VNSuSbqsMa00wU8UF7R.',
-                'role' => 'faculty',
-                'semester' => 0,
-                'remember_token' => 'fHIB3Etx9bvEeK3cL5EqOAsQEzJSQEgU0PszMMwEWHPBDNFmVPO9409mtiXh',
-                'created_at' => '2015-08-12 20:48:31',
-                'updated_at' => '2015-08-12 21:14:45',
-            ),
-
-            array(
-                'id' => 25,
-                'name' => 'Mrs. Deepthi. K',
-                'username' => 'deeptik',
-                'email' => 'deepthik@msrit.edu',
-                'password' => '$2y$10$zZT3CHbghHyfqtvBPxirF.YD5VU7wRybQj4Jt4yu0L0fIQSXAlovO',
-                'role' => 'faculty',
-                'semester' => 0,
-                'remember_token' => 'VKJkahlLtxRY4awUtC6Gts1RPL9RPrwlSBXLlfUwDucF6Xy9cX3Do62yu6T3',
-                'created_at' => '2015-08-12 21:10:36',
-                'updated_at' => '2015-08-12 21:16:45',
-            ),
-
-            array(
-                'id' => 26,
-                'name' => 'Student1',
-                'username' => '1MS13IS001',
-                'email' => 'test@gmail.com',
-                'password' => '$2y$10$Cvp1sqKJ8Fra5LNHY/qZquknfiwvE9S2sBa1n5yaJCyrxE/oOQT5K',
-                'role' => 'student',
-                'semester' => 3,
-                'remember_token' => 'hoTmbbbHzbQbBaPuQKpNeJ6S8TkRQUCtzpxSQUNNZMJmPo24PgqQMiCkI1jC',
-                'created_at' => '2015-11-19 21:55:33',
-                'updated_at' => '2015-11-19 21:59:28',
-            ),
-
-            array(
-                'id' => 27,
-                'name' => 'testuser',
-                'username' => 'testuser',
-                'email' => 't2est@gmail.com',
-                'password' => '$2y$10$WZMDUGRkxQEpOIpy5mWf0.0LYsJ/kpBv9WzU3fPSXJlMY48OScSAa',
-                'role' => 'hod',
-                'semester' => 0,
-                'remember_token' => 't8xMdaFrQAQneJTLsNJLz0S10JiAerfqJf0Y61HgHxpzfD7LIrci0S5cBlg9',
-                'created_at' => '2015-12-14 17:16:35',
-                'updated_at' => '2015-12-14 17:32:25',
-            ),
-
-        ));
     }
 }
