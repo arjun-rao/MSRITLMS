@@ -1,27 +1,71 @@
-## Laravel PHP Framework
+Welcome to the MSRITLMS Installation Guide for Ubuntu 16.04:
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+###Install LAMP Stack
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+    sudo apt-get install apache2
+    sudo su
+    root@ubuntu:~# systemctl    enable  apache2
+    root@ubuntu:~# systemctl    start  apache2
+    root@ubuntu:~# systemctl    status  apache2
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Apache to be tested at: http://localhost/
 
-## Official Documentation
+Install MySQL:
+    sudo apt-get install mysql-server mysql-client
+    sudo systemctl status mysql
+	
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+Install PHP
+    sudo apt-get update 
+    sudo apt-get install php7.0-mysql php7.0-curl php7.0-json php7.0-cgi  php7.0 
+    sudo apt install libapache2-mod-php7
 
-## Contributing
+Test PHP
+    php -v
+    sudo vi  /var/www/html/info.php
+    <?php
+	    phpinfo();
+    ?>
+    sudo systemctl restart apache2 #restarts apache
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+Install PHPMyAdmin
+    sudo apt-get install phpmyadmin
+    sudo nano /etc/apache2/apache2.conf
+At the end of the file include:
+    Include /etc/phpmyadmin/apache.conf
+    sudo systemctl restart apache2
+Test at http://localhost/phpmyadmin
+Create a new database called msritweb or similar
 
-## Security Vulnerabilities
+### Clone Project
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+1) Git clone from Repo to directory - eg /home/user/MSRITLMS/
+2) Install composer (getcomposer.org)
+3) cd to MSRITLMS/
+Run:
+    composer install
+5) Setup correct folder permissions:
+    sudo chgrp -R www-data storage bootstrap/cache
+    sudo chmod -R ug+rwx storage bootstrap/cache
+6) Change .env.example file to .env and set database params
+7) change parameters in config/database.php to match database
+8) Create db seed (for at least user’s table, dept table, and pages for department home (parent_code = NULL) and ensure migrations are correct
+8) run 
+    php artisan optimize
+    php artisan:migrate
+    php artisan db:seed --class=customDBClass 
+9) Add virtualhost (sites-available Directory) to MSRITLMS directory (eg: isedept.app), and suitable entry to /etc/hosts
+    sudo a2ensite isedept.app
+    sudo systemctl restart apache2
 
-### License
+10) Enable mod_rewrite
+    sudo a2enmod rewrite
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+10) Visit isedept.app or similar
+
+
+
+
+
+
