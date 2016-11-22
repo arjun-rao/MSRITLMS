@@ -11,7 +11,7 @@ use App\User;
          *
          * @var array
          */
-        protected $fillable = ['username', 'department_code', 'designation','qualification','researcharea'];
+        protected $fillable = ['username', 'department_code', 'designation','qualification','researcharea','date_of_birth','address','phone','msritemail','gender','website','date_of_joining'];
 
         public function getDetails()
         {

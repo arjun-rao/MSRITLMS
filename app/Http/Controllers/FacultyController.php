@@ -219,6 +219,22 @@ class FacultyController extends Controller
                     $instructor->qualification = Input::get('qualification');
                 if(Input::get('researcharea') != $instructor->researcharea)
                     $instructor->researcharea = Input::get('researcharea');
+                if(Input::get('date_of_birth')!= $instructor->date_of_birth)
+                    $instructor->date_of_birth=Input::get('date_of_birth');
+                if(Input::get('address')!= $instructor->address)
+                    $instructor->address=Input::get('address');
+                if(Input::get('phone')!= $instructor->phone)
+                    $instructor->phone=Input::get('phone');
+                if(Input::get('msritemail')!= $instructor->msritemail)
+                    $instructor->msritemail=Input::get('msritemail');
+                if(Input::get('gender')!= $instructor->gender)
+                    $instructor->gender=Input::get('gender');
+                if(Input::get('website')!= $instructor->website)
+                    $instructor->website=Input::get('website');
+                if(Input::get('date_of_joining')!= $instructor->date_of_joining)
+                    $instructor->date_of_joining=Input::get('date_of_joining');
+
+                //'date_of_birth','address','phone','msritemail','gender','website','date_of_joining'
 
                 $instructor->save();
                 $instructor['name'] = $currentuser->name;

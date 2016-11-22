@@ -22,6 +22,15 @@
                                     <tr><td>Designation</td><td>{{{$instructor->designation}}}</td></tr>
                                     <tr><td>Qualifications</td><td>{{{$instructor->qualification}}}</td></tr>
                                     <tr><td>Research Areas</td><td>{{{$instructor->researcharea}}}</td></tr>
+                                    <tr><td>Date of Birth</td><td>{{{$instructor->date_of_birth}}}</td></tr>
+                                    <tr><td>Address</td><td>{{{$instructor->address}}}</td></tr>
+                                    <tr><td>Phone Number</td><td>{{{$instructor->phone}}}</td></tr>
+                                    <tr><td>MSRIT Email</td><td>{{{$instructor->msritemail}}}</td></tr>
+                                    <tr><td>Gender</td><td>{{{$instructor->gender}}}</td></tr>
+                                    <tr><td>Website</td><td>{{{$instructor->website}}}</td></tr>
+                                    <tr><td>Date of Joining</td><td>{{{$instructor->date_of_joining}}}</td></tr>
+
+
                             </table>
                         </div>
                         </li>
