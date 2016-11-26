@@ -24,6 +24,7 @@
 					<form class="form-horizontal" role="form"  enctype="multipart/form-data" method="POST" action="{{ url('/faculty/events/edit') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="hidden" name="faculty_id" value="{{ $current->faculty_id }}">
+						<input type="hidden" name="id" value="{{ $current->id }}">
 
 
 						<div class="form-group">
@@ -75,7 +76,7 @@
 								</button>
 							</div>
 						</div>
-						<p>* Uploading new image is optional, ensure file size is less than 100 KB</p>
+
 					</form>
 				</div>
 			</div>
