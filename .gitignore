@@ -1,5 +1,15 @@
-/vendor
-/node_modules
-Homestead.yaml
-Homestead.json
+config/database.php
+config/app.php
+
+vendor/
+
+
+
+# Laravel 5 & Lumen specific
+public/uploads
+storage/*.key
+.env.*.php
+.env.php
 .env
+
+.idea/workspace.xml
