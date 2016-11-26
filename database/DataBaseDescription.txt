@@ -22,9 +22,7 @@ Educational Qualification Table:
         -Year of Passing
         -University
         -Discipline
-		-Masters Degree
-		-Research 
-		-Post Research (If Any)
+
 		
 Experience Table:
 	- id (auto_inc)
