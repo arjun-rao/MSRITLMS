@@ -23,7 +23,7 @@ Educational Qualification Table:
         -University
         -Discipline
 
-		
+
 Experience Table:
 	- id (auto_inc)
 	- FacultyID
@@ -36,7 +36,7 @@ Experience Table:
 	- Duration
 	- Organisation
 
-Conference/Workshop Attended:
+Conference/Workshop/Event Attended:
 	-FacultyID
 	-Title
 	-Duration/dates
@@ -50,9 +50,9 @@ Requests for Training
 	-Duration
 	-Location
 	-Topic
-	
 
-Industry Interaction: 
+
+Industry Interaction:
 	-FacultyID
 	-Name of industry
 	-Duration
@@ -72,7 +72,7 @@ Project Guidance
 	-Type: UG/PG/PHD
 	-Number of students
 	-year
-		
+
 
 Publications Table:
     - id (auto_inc)
