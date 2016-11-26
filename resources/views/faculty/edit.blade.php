@@ -89,6 +89,56 @@ $(function(){
 								<input type="text" class="form-control" name="researcharea" value="{{ $current->researcharea or old('researchsarea') }}">
 							</div>
 						</div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label">Address</label>
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="address" value="{{ $current->address or old('address') }}">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label">Date of Birth</label>
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="date_of_birth" value="{{ $current->date_of_birth or old('date_of_birth') }}">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label">Phone Number</label>
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="phone" value="{{ $current->phone or old('phone') }}">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label">MSRIT Email</label>
+              <div class="col-md-6">
+                <input type="email" class="form-control" name="msritemail" value="{{ $current->msritemail or old('msritemail') }}">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label">Gender</label>
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="gender" value="{{ $current->gender or old('gender') }}">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label">Website</label>
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="website" value="{{ $current->website or old('website') }}">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label">Date of Joining</label>
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="date_of_joining" value="{{ $current->date_of_joining or old('date_of_joining') }}">
+              </div>
+            </div>
+
 						<div class="form-group">
 							<label class="col-md-4 control-label">Upload New Profile Image*</label>
 							<div class="col-md-6">
