@@ -39,6 +39,8 @@ Experience Table:
 Conference/Workshop Attended:
 	-FacultyID
 	-Title
+	-Type
+	-Organisation
 	-Duration/dates
 	-Where/location
 	-Report link
