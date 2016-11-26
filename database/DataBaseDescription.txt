@@ -24,10 +24,6 @@ Educational Qualification Table:
     -Discipline
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> develop
 Experience Table:
 	- id (auto_inc)
 	- FacultyID
