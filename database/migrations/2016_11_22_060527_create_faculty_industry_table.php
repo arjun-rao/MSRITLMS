@@ -19,6 +19,7 @@ class CreateFacultyIndustryTable extends Migration
           $table->text('description');
           $table->string('duration');
           $table->string('report_link');
+          $table->timestamps();
           $table->foreign('faculty_id')->references('username')->on('instructors')->onDelete('cascade');
         });
     }
