@@ -19,8 +19,8 @@
 																		<tr><td>Publication Link</td><td>{{{$publication->publication_link}}}</td></tr>
 																		@if(Auth::user()->isFaculty)
 																			<tr>
-																				<td><a href="{{ url('/faculty/publications/edit'.$publication->id)}}">Edit</a></td>
-																				<td><a href="{{ url('/faculty/publications/edit'.$publication->id)}}">Delete</a></td>
+																				<td><a href="{{ url('/faculty/publications/edit/'.$publication->id)}}">Edit</a></td>
+																				<td><a href="{{ url('/faculty/publications/delete/'.$publication->id)}}">Delete</a></td>
 																			</tr>
 																		@endif
 														</table>
