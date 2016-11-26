@@ -57,7 +57,11 @@
            </div>
            @endif
         </div>
+        <div class="col-md-12"></div>
+        <div class="col-md-2"></div>
         @include('faculty.education.view')
+        <div class="col-md-12"></div>
+        <div class="col-md-2"></div>
         @include('faculty.event.view')
 	</div>
 </div>

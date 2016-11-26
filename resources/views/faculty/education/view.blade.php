@@ -1,4 +1,4 @@
-<div class="col-md-8 col-md-offset-2">
+<div class="col-md-8">
     <div class="panel panel-default">
         <div class="panel-heading">
             Educational Qualification
@@ -13,7 +13,7 @@
                                 <tr><td>Degree</td><td>{{{$item->degree}}}</td></tr>
                                 <tr><td>Year of Graduation</td><td>{{{$item->year}}}</td></tr>
                                 <tr><td>University</td><td>{{{$item->university}}}</td></tr>
-                                <tr><td>Discipline</td><td>{{{$item->disciplini}}}</td></tr>
+                                <tr><td>Discipline</td><td>{{{$item->discipline}}}</td></tr>
                                  @if(Auth::user()->isFaculty())
                                     <tr>
                                         <td><a href="{{ url('/faculty/education/edit/'.$item->id)}}">Edit</a></td>
