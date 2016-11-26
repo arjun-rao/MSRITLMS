@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class FacultyIndustry extends Model
 {
+
+  protected $table = 'faculty_industry';
   protected $fillable = ['faculty_id','organization','description', 'duration', 'report_link'];
   public function instructor()
   {

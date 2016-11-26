@@ -23,13 +23,13 @@
 					<p id="jserror" class="alert alert-danger" style="display:none;"></p>
 					<form class="form-horizontal" role="form"  enctype="multipart/form-data" method="POST" action="{{ url('/faculty/events/add') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type="hidden" name="faculty_id" value="{{ Auth::user()->name }}">
+            <input type="hidden" name="faculty_id" value="{{ Auth::user()->username }}">
 
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Title</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="title" value="{{ old(title') }}">
+								<input type="text" class="form-control" name="title" value="{{ old('title') }}">
 							</div>
 						</div>
 
@@ -71,11 +71,10 @@
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
 								<button type="submit" class="btn btn-primary">
-									Edit Details
+									Submit
 								</button>
 							</div>
 						</div>
-						<p>* Uploading new image is optional, ensure file size is less than 100 KB</p>
 					</form>
 				</div>
 			</div>
