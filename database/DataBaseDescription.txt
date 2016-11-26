@@ -19,10 +19,9 @@ Educational Qualification Table:
 		- id (auto_inc)
 		- FacultyID
 		-Degree
-			-Year of Passing
-			-University
-			-Discipline
-			-% or CGPA (optional)
+        -Year of Passing
+        -University
+        -Discipline
 		-Masters Degree
 		-Research 
 		-Post Research (If Any)
@@ -30,9 +29,14 @@ Educational Qualification Table:
 Experience Table:
 	- id (auto_inc)
 	- FacultyID
-	- Non-Teaching Experience
-	- Teaching Experience
-	- In MSRIT and Outside
+	- Type
+	    - Industry
+	    - Non-Teaching Experience
+	    - Teaching Experience
+	- Role/Title
+	- Description
+	- Duration
+	- Organisation
 
 Conference/Workshop Attended:
 	-FacultyID
@@ -73,13 +77,13 @@ Project Guidance
 		
 
 Publications Table:
-		- id (auto_inc)
-		- FacultyID
-		- year of publication
-		- Title
-		- Type - Conference/Journal/Book/Book Chapter
-		- Book/Journal/Conference_Title
-		- Publisher/Organiser
-		- Link 
-		- //Impact Factor - float
-		- Research Area/Domain
+    - id (auto_inc)
+    - FacultyID
+    - year of publication
+    - Title
+    - Type - Conference/Journal/Book/Book Chapter
+    - Book/Journal/Conference_Title
+    - Publisher/Organiser
+    - Link
+    - //Impact Factor - float
+    - Research Area/Domain
