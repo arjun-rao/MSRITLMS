@@ -36,7 +36,7 @@ Experience Table:
 	- Duration
 	- Organisation
 
-Conference/Workshop Attended:
+Conference/Workshop/Event Attended:
 	-FacultyID
 	-Title
 	-Type
