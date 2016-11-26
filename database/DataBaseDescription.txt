@@ -19,11 +19,15 @@ Educational Qualification Table:
 		- id (auto_inc)
 		- FacultyID
 		-Degree
-        -Year of Passing
-        -University
-        -Discipline
+    -Year of Passing
+    -University
+    -Discipline
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> develop
 Experience Table:
 	- id (auto_inc)
 	- FacultyID
@@ -39,6 +43,8 @@ Experience Table:
 Conference/Workshop/Event Attended:
 	-FacultyID
 	-Title
+	-Type
+	-Organisation
 	-Duration/dates
 	-Where/location
 	-Report link
@@ -54,7 +60,8 @@ Requests for Training
 
 Industry Interaction:
 	-FacultyID
-	-Name of industry
+	-Organization
+	-Description
 	-Duration
 	-Link
 
