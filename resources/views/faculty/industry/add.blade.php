@@ -28,7 +28,7 @@
 						<div class="form-group">
 							<label class="col-md-4 control-label">Organization</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="name" value="{{ old('name') }}">
+								<input type="text" class="form-control" name="organization" value="{{ old('organization') }}">
 							</div>
 						</div>
 
@@ -42,25 +42,24 @@
             <div class="form-group">
 							<label class="col-md-4 control-label">Duration</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="name" value="{{ old('duration') }}">
+								<input type="text" class="form-control" name="duration" value="{{ old('duration') }}">
 							</div>
 						</div>
 
             <div class="form-group">
               <label class="col-md-4 control-label">Report Link</label>
               <div class="col-md-6">
-                <input type="text" class="form-control" name="name" value="{{ old('report_link') }}">
+                <input type="text" class="form-control" name="report_link" value="{{ old('report_link') }}">
               </div>
             </div>
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
 								<button type="submit" class="btn btn-primary">
-									Edit Details
+									Submit
 								</button>
 							</div>
 						</div>
-						<p>* Uploading new image is optional, ensure file size is less than 100 KB</p>
 					</form>
 				</div>
 			</div>
