@@ -16,7 +16,7 @@ class CreateCourseinstructorJoinTable extends Migration
             $table->string('course');
             $table->string('instructor');
             $table->foreign('course')->references('course_code')->on('courses')->onDelete('cascade');
-            $table->foreign('instructor')->references('username')->on('users')->onDelete('cascade');
+            $table->foreign('instructor')->references('username')->on('instructors')->onDelete('cascade');
         });
     }
 
