@@ -13,6 +13,7 @@ class FacultyEducation extends Model
      *
      * @var array
      */
+    protected $table = 'faculty_education';
     protected $fillable = ['faculty_id','degree','year','university','discipline'];
 
     public function instructor()

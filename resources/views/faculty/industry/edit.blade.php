@@ -23,8 +23,13 @@
 					<p id="jserror" class="alert alert-danger" style="display:none;"></p>
 					<form class="form-horizontal" role="form"  enctype="multipart/form-data" method="POST" action="{{ url('/faculty/industry/edit') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+<<<<<<< HEAD
             <input type="hidden" name="faculty_id" value="{{ $current->faculty_id }}">
 						<input type="hidden" name="id" value="{{ $current->id }}">
+=======
+            	<input type="hidden" name="faculty_id" value="{{ $current->faculty_id }}">
+            	<input type="hidden" name="id" value="{{ $current->id  }}">
+>>>>>>> FacultyControllers
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Organization</label>

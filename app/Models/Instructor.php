@@ -30,5 +30,13 @@ use App\User;
         {
             return $this->belongsToMany('App\Models\Course','course_instructor','instructor','course');
         }
+        public function education()
+        {
+            return $this->hasMany('App\Models\FacultyEducation','faculty_id','username')->orderBy('created_at');
+        }
+        public function event()
+        {
+            return $this->hasMany('App\Models\FacultyEvent','faculty_id','username')->orderBy('created_at');
+        }
     }
 

@@ -1,4 +1,4 @@
-<div class="col-md-8">
+<div class="col-md-8 col-md-offset-2">
 	<div class="panel panel-default">
 		<div class="panel-heading">Events Attended
 			@if(Auth::user()->isFaculty())
@@ -17,8 +17,8 @@
 																		<tr><td>Report Link</td><td>{{{$event->report_link}}}</td></tr>
 																		@if(Auth::user()->isFaculty())
 																			<tr>
-																				<td><a href="{{ url('/faculty/events/edit'.$event->id)}}">Edit</a></td>
-																				<td><a href="{{ url('/faculty/events/edit'.$event->id)}}">Delete</a></td>
+																				<td><a href="{{ url('/faculty/events/edit/'.$event->id)}}">Edit</a></td>
+																				<td><a href="{{ url('/faculty/events/delete/'.$event->id)}}">Delete</a></td>
 																			</tr>
 																		@endif
 

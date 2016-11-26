@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class FacultyEvent extends Model
 {
-  protected $primaryKey = 'username';
 
+
+  protected $table = 'faculty_event';
   /**
    * The attributes that are mass assignable.
    *
