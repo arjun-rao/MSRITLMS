@@ -46,7 +46,7 @@ class EventController extends Controller
         $event = FacultyEvent::findorFail($id);
         if($event->faculty_id == Auth::user()->username) {
             $event->delete();
-            return redirect('/faculty/event/index');
+            return redirect('/faculty/events/index');
         }
         else
             abort('401','Unauthorised');

@@ -71,6 +71,8 @@ class FacultyController extends Controller
                 $instructor = Instructor::find($currentuser->username);
                 $instructor['name'] = $currentuser->name;
                 $instructor['email'] = $currentuser->email;
+                $education = $instructor->education;
+                $event = $instructor->event;
                 $mycourses = $instructor->courses->pluck('course_code');
             }
 
@@ -83,6 +85,8 @@ class FacultyController extends Controller
                     $instructor = Instructor::find($username);
                     $instructor['name'] = $currentuser->name;
                     $instructor['email'] = $currentuser->email;
+                    $education = $instructor->education;
+                    $event = $instructor->event;
                     $mycourses = $instructor->courses->pluck('course_code');
                 }
                 else //user is not a faculty, return 404
@@ -97,7 +101,7 @@ class FacultyController extends Controller
 
         }
         //render the object if everything was fine.
-        return view('faculty.profile',['instructor'=>$instructor,'courses'=>$mycourses]);
+        return view('faculty.profile',['instructor'=>$instructor,'courses'=>$mycourses,'education' => $education,'events' => $event]);
     }
 
     public function getEdit()

@@ -30,7 +30,7 @@
 						<div class="form-group">
 							<label class="col-md-4 control-label">Title</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="title" value="{{ $current->title or old(title') }}">
+								<input type="text" class="form-control" name="title" value="{{ $current->title or old('title') }}">
 							</div>
 						</div>
 

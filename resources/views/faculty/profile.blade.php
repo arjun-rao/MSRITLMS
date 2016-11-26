@@ -57,6 +57,8 @@
            </div>
            @endif
         </div>
+        @include('faculty.education.view')
+        @include('faculty.event.view')
 	</div>
 </div>
 @endsection
