@@ -80,7 +80,7 @@
             <div style="margin-top: 10%;" class="col-lg-12 text-center">
                 <hr>
                 <p>&#169; Department of Information Science and Engineering,MSRIT,Bangalore</p>
-                <p> Developed by Arjun Rao, ISE Department, MSRIT</p>
+                <p> Developed by Amisha Agarwal, Anisha Mascarenhas and Arjun Rao, ISE Department, MSRIT</p>
             </div>
         </div>
     </div>
