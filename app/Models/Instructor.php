@@ -54,5 +54,9 @@ use App\User;
         {
             return $this->hasMany('App\Models\FacultyProjectFunding','faculty_id','username')->orderBy('created_at');
         }
+        public function projectguidance()
+        {
+            return $this->hasMany('App\Models\FacultyProjectGuidance','faculty_id','username')->orderBy('created_at');
+        }
     }
 

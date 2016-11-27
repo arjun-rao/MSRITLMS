@@ -21,7 +21,7 @@
 						</div>
 					@endif
 					<p id="jserror" class="alert alert-danger" style="display:none;"></p>
-					<form  class="form-horizontal" role="form"  enctype="multipart/form-data" method="POST" action="{{ url('/faculty/ProjectGuidance/add') }}">
+					<form  class="form-horizontal" role="form"  enctype="multipart/form-data" method="POST" action="{{ url('/faculty/projectguidance/add') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						<input type="hidden" name="faculty_id" value="{{ Auth::user()->username }}">
 

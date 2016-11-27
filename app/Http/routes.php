@@ -38,6 +38,7 @@ Route::group(['prefix'=>'faculty/','middleware'=>'faculty'],function(){
     Route::controller('experience','Faculty\ExperienceController');
     Route::controller('publication','Faculty\PublicationController');
     Route::controller('projectfunding','Faculty\ProjectFundingController');
+    Route::controller('projectguidance','Faculty\ProjectGuidanceController');
 });
 
 

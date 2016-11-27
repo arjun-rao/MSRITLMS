@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ProjectGuidance extends Model
+class FacultyProjectGuidance extends Model
 {
   protected $table = 'faculty_project_guidance';
   protected $fillable = ['faculty_id','title','area','type','count','year'];

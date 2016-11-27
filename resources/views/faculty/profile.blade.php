@@ -75,6 +75,9 @@
         <div class="col-md-12"></div>
         <div class="col-md-2"></div>
         @include('faculty.projectfunding.view')
+        <div class="col-md-12"></div>
+        <div class="col-md-2"></div>
+        @include('faculty.projectguidance.view')
 	</div>
 </div>
 @endsection

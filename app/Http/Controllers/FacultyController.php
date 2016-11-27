@@ -78,6 +78,7 @@ class FacultyController extends Controller
                 $experience = $instructor->experience;
                 $publication = $instructor->publication;
                 $projectfunding = $instructor->projectfunding;
+                $projectguidance = $instructor->projectguidance;
                 $mycourses = $instructor->courses->pluck('course_code');
             }
 
@@ -97,6 +98,7 @@ class FacultyController extends Controller
                     $experience = $instructor->experience;
                     $publication = $instructor->publication;
                     $projectfunding = $instructor->projectfunding;
+                    $projectguidance = $instructor->projectguidance;
                     $mycourses = $instructor->courses->pluck('course_code');
                 }
                 else //user is not a faculty, return 404
@@ -119,7 +121,8 @@ class FacultyController extends Controller
             'industries'=>$industry,
             'experiences'=>$experience,
             'publications'=>$publication,
-            'projectfunding' => $projectfunding
+            'projectfunding' => $projectfunding,
+            'projectguidance' => $projectguidance
         ];
         //render the object if everything was fine.
         return view('faculty.profile',$data);
