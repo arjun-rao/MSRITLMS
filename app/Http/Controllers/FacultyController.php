@@ -68,11 +68,16 @@ class FacultyController extends Controller
             }
             else //faculty is viewing their own profile, prepare object for rendering
             {
+                $noAdd = false;
                 $instructor = Instructor::find($currentuser->username);
                 $instructor['name'] = $currentuser->name;
                 $instructor['email'] = $currentuser->email;
                 $education = $instructor->education;
                 $event = $instructor->event;
+                $industry = $instructor->industry;
+                $experience = $instructor->experience;
+                $publication = $instructor->publication;
+                $projectfunding = $instructor->projectfunding;
                 $mycourses = $instructor->courses->pluck('course_code');
             }
 
@@ -82,11 +87,16 @@ class FacultyController extends Controller
             if( $currentuser = User::find($username)){
                 if($currentuser->isFaculty()) //user is faculty, prepare object for rendering
                 {
+                    $noAdd = true;
                     $instructor = Instructor::find($username);
                     $instructor['name'] = $currentuser->name;
                     $instructor['email'] = $currentuser->email;
                     $education = $instructor->education;
                     $event = $instructor->event;
+                    $industry = $instructor->industry;
+                    $experience = $instructor->experience;
+                    $publication = $instructor->publication;
+                    $projectfunding = $instructor->projectfunding;
                     $mycourses = $instructor->courses->pluck('course_code');
                 }
                 else //user is not a faculty, return 404
@@ -100,8 +110,19 @@ class FacultyController extends Controller
             }
 
         }
+        $data = [
+            'instructor'=>$instructor,
+            'courses'=>$mycourses,
+            'noAdd'=>$noAdd,
+            'education' => $education,
+            'events' => $event,
+            'industries'=>$industry,
+            'experiences'=>$experience,
+            'publications'=>$publication,
+            'projectfunding' => $projectfunding
+        ];
         //render the object if everything was fine.
-        return view('faculty.profile',['instructor'=>$instructor,'courses'=>$mycourses,'education' => $education,'events' => $event]);
+        return view('faculty.profile',$data);
     }
 
     public function getEdit()

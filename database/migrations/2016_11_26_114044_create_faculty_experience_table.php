@@ -22,7 +22,7 @@ class CreateFacultyExperienceTable extends Migration
         $table->string('organization');
         $table->timestamps();
         $table->foreign('faculty_id')->references('username')->on('instructors')->onDelete('cascade');
-      }
+      });
     }
 
     /**
