@@ -31,6 +31,12 @@
 								<input type="text" class="form-control" name="article_title" value="{{ old('article_title') }}">
 							</div>
 						</div>
+						<div class="form-group">
+                            <label class="col-md-4 control-label">Authors</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="authors" value="{{ old('authors') }}">
+                            </div>
+                        </div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Domain</label>

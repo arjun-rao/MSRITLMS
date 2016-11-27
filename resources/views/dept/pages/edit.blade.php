@@ -3,6 +3,7 @@
 
 
 <script type="text/javascript" src="{{url('/js/tinymce/tinymce.min.js')}}"></script>
+
 <script type="text/javascript">
 tinymce.init({
     selector: "#page-content",
