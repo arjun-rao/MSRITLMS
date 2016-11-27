@@ -31,6 +31,18 @@ Route::group(['prefix'=>'courses/{course_code}/','middleware'=>'course_visible']
     Route::controller('announcements','AnnouncementController');
 });
 
+Route::group(['prefix'=>'faculty/','middleware'=>'faculty'],function(){
+    Route::controller('events','Faculty\EventController');
+    Route::controller('education','Faculty\EducationController');
+    Route::controller('industry','Faculty\IndustryController');
+    Route::controller('experience','Faculty\ExperienceController');
+    Route::controller('publication','Faculty\PublicationController');
+    Route::controller('projectfunding','Faculty\ProjectFundingController');
+    Route::controller('projectguidance','Faculty\ProjectGuidanceController');
+});
+
+
+
 Route::group(['middleware'=>'course_visible'],function(){
     Route::get('courses/{course_code}','CourseController@missingMethod');
 });

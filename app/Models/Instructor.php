@@ -30,5 +30,33 @@ use App\User;
         {
             return $this->belongsToMany('App\Models\Course','course_instructor','instructor','course');
         }
+        public function education()
+        {
+            return $this->hasMany('App\Models\FacultyEducation','faculty_id','username')->orderBy('created_at');
+        }
+        public function event()
+        {
+            return $this->hasMany('App\Models\FacultyEvent','faculty_id','username')->orderBy('created_at');
+        }
+        public function industry()
+        {
+            return $this->hasMany('App\Models\FacultyIndustry','faculty_id','username')->orderBy('created_at');
+        }
+        public function experience()
+        {
+            return $this->hasMany('App\Models\FacultyExperience','faculty_id','username')->orderBy('created_at');
+        }
+        public function publication()
+        {
+            return $this->hasMany('App\Models\FacultyPublication','faculty_id','username')->orderBy('created_at');
+        }
+        public function projectfunding()
+        {
+            return $this->hasMany('App\Models\FacultyProjectFunding','faculty_id','username')->orderBy('created_at');
+        }
+        public function projectguidance()
+        {
+            return $this->hasMany('App\Models\FacultyProjectGuidance','faculty_id','username')->orderBy('created_at');
+        }
     }
 

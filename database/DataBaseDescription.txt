@@ -19,24 +19,28 @@ Educational Qualification Table:
 		- id (auto_inc)
 		- FacultyID
 		-Degree
-			-Year of Passing
-			-University
-			-Discipline
-			-% or CGPA (optional)
-		-Masters Degree
-		-Research 
-		-Post Research (If Any)
-		
+    -Year of Passing
+    -University
+    -Discipline
+
+
 Experience Table:
 	- id (auto_inc)
 	- FacultyID
-	- Non-Teaching Experience
-	- Teaching Experience
-	- In MSRIT and Outside
+	- Type
+	    - Industry
+	    - Non-Teaching Experience
+	    - Teaching Experience
+	- Role/Title
+	- Description
+	- Duration
+	- Organisation
 
-Conference/Workshop Attended:
+Conference/Workshop/Event Attended:
 	-FacultyID
 	-Title
+	-Type
+	-Organisation
 	-Duration/dates
 	-Where/location
 	-Report link
@@ -48,11 +52,12 @@ Requests for Training
 	-Duration
 	-Location
 	-Topic
-	
 
-Industry Interaction: 
+
+Industry Interaction:
 	-FacultyID
-	-Name of industry
+	-Organization
+	-Description
 	-Duration
 	-Link
 
@@ -70,16 +75,16 @@ Project Guidance
 	-Type: UG/PG/PHD
 	-Number of students
 	-year
-		
+
 
 Publications Table:
-		- id (auto_inc)
-		- FacultyID
-		- year of publication
-		- Title
-		- Type - Conference/Journal/Book/Book Chapter
-		- Book/Journal/Conference_Title
-		- Publisher/Organiser
-		- Link 
-		- //Impact Factor - float
-		- Research Area/Domain
+    - id (auto_inc)
+    - FacultyID
+    - year of publication
+    - Title
+    - Type - Conference/Journal/Book/Book Chapter
+    - Book/Journal/Conference_Title
+    - Publisher/Organiser
+    - Link
+    - //Impact Factor - float
+    - Research Area/Domain
