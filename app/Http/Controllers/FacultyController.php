@@ -267,7 +267,7 @@ class FacultyController extends Controller
                 $instructor->save();
                 $instructor['name'] = $currentuser->name;
                 $instructor['email'] = $currentuser->email;
-                return view('faculty.profile',['instructor'=>$instructor]);
+                return redirect('/faculty/profile');
             }
 
         }
