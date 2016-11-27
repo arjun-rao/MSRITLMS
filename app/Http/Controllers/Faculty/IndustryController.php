@@ -82,8 +82,8 @@ class IndustryController extends Controller
         // update'organization','description', 'duration', 'report_link'
 
         //update industry details
-        if(Input::get('organisation') != $industry->organisation)
-            $industry->organisation = Input::get('organisation');
+        if(Input::get('organization') != $industry->organization)
+            $industry->organization = Input::get('organization');
         if(Input::get('description') != $industry->description)
             $industry->description = Input::get('description');
         if(Input::get('duration') != $industry->duration)
