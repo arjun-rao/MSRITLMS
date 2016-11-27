@@ -7,7 +7,7 @@
 		<div class="col-md-8">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-				   Edit an experience
+				   Edit Experience
 				</div>
 				<div class="panel-body">
 					@if (count($errors) > 0)
@@ -29,7 +29,7 @@
 						<div class="form-group">
 							<label class="col-md-4 control-label">Organization</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="organization" value="{{ $current->orgaization or old('organization') }}">
+								<input type="text" class="form-control" name="organization" value="{{ $current->organization or old('organization') }}">
 							</div>
 						</div>
 

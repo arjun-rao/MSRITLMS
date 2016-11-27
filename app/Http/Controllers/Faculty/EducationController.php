@@ -26,7 +26,7 @@ class EducationController extends Controller
             $me = Instructor::with('courses','education')->find(Auth::user()->username);
             $education = $me->education;
             $mycourses = $me->courses->pluck('course_code');
-            return view('faculty.education.index', ['education' => $education, 'courses' => $mycourses]);
+            return view('faculty.education.index', ['education' => $education, 'courses' => $mycourses,'noAdd'=>false]);
         }
         else
             return redirect('/');

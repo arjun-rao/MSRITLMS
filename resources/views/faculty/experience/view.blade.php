@@ -1,7 +1,7 @@
 <div class="col-md-8">
 	<div class="panel panel-default">
-		<div class="panel-heading">Experience
-		@if(Auth::user()->isFaculty())
+		<div class="panel-heading">Work Experience
+		@if(Auth::user()->isFaculty() and $noAdd == false)
 				<a href="{{url('/faculty/experience/add')}}" class="btn btn-info">Add</a>
 		@endif
 		</div>
@@ -16,10 +16,10 @@
 																		<tr><td>Description</td><td>{{{$experience->description}}}</td></tr>
 																		<tr><td>Duration</td><td>{{{$experience->duration}}}</td></tr>
 
-																		@if(Auth::user()->isFaculty)
+																		@if(Auth::user()->isFaculty()  and $noAdd == false)
 																		<tr>
-																			<td><a href="{{ url('/faculty/industry/edit'.$industry->id)}}">Edit</a></td>
-																			<td><a href="{{ url('/faculty/industry/edit'.$industry->id)}}">Delete</a></td>
+																			<td><a href="{{ url('/faculty/experience/edit/'.$experience->id)}}">Edit</a></td>
+																			<td><a href="{{ url('/faculty/experience/delete/'.$experience->id)}}">Delete</a></td>
 																		</tr>
 																		@endif
 														</table>

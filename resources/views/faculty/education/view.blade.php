@@ -2,7 +2,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             Educational Qualification
-            @if(Auth::user()->isFaculty())
+            @if(Auth::user()->isFaculty() and $noAdd == false)
                 <a href="{{url('/faculty/education/add')}}" class="btn btn-info">Add</a>
             @endif
         </div>
@@ -14,7 +14,7 @@
                                 <tr><td>Year of Graduation</td><td>{{{$item->year}}}</td></tr>
                                 <tr><td>University</td><td>{{{$item->university}}}</td></tr>
                                 <tr><td>Discipline</td><td>{{{$item->discipline}}}</td></tr>
-                                 @if(Auth::user()->isFaculty())
+                                 @if(Auth::user()->isFaculty()  and $noAdd == false)
                                     <tr>
                                         <td><a href="{{ url('/faculty/education/edit/'.$item->id)}}">Edit</a></td>
                                         <td><a href="{{ url('/faculty/education/delete/'.$item->id)}}">Delete</a></td>

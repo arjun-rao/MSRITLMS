@@ -7,7 +7,7 @@
 		<div class="col-md-8">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-				   Add an experience
+				   Add Work Experience
 				</div>
 				<div class="panel-body">
 					@if (count($errors) > 0)
@@ -21,7 +21,7 @@
 						</div>
 					@endif
 					<p id="jserror" class="alert alert-danger" style="display:none;"></p>
-					<form class="form-horizontal" role="form"  enctype="multipart/form-data" method="POST" action="{{ url('/faculty/industry/add') }}">
+					<form class="form-horizontal" role="form"  enctype="multipart/form-data" method="POST" action="{{ url('/faculty/experience/add') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
             	<input type="hidden" name="faculty_id" value="{{ Auth::user()->username }}">
 

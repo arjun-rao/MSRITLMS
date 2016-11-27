@@ -26,7 +26,7 @@ class EventController extends Controller
             $me = Instructor::with('courses','event')->find(Auth::user()->username);
             $event = $me->event;
             $mycourses = $me->courses->pluck('course_code');
-            return view('faculty.event.index', ['events' => $event, 'courses' => $mycourses]);
+            return view('faculty.event.index', ['events' => $event, 'courses' => $mycourses,'noAdd'=>false]);
         }
         else
             return redirect('/');

@@ -35,6 +35,9 @@ Route::group(['prefix'=>'faculty/','middleware'=>'faculty'],function(){
     Route::controller('events','Faculty\EventController');
     Route::controller('education','Faculty\EducationController');
     Route::controller('industry','Faculty\IndustryController');
+    Route::controller('experience','Faculty\ExperienceController');
+    Route::controller('publication','Faculty\PublicationController');
+    Route::controller('projectfunding','Faculty\ProjectFundingController');
 });
 
 
