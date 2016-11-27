@@ -96,6 +96,8 @@ class PublicationController extends Controller
             $publication->publication_link = Input::get('publication_link');
         if(Input::get('domain') != $publication->domain)
             $publication->domain = Input::get('domain');
+        if(Input::get('authors') != $publication->authors)
+            $publication->authors = Input::get('authors');
 
 
 

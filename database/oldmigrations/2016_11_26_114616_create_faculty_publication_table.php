@@ -15,6 +15,7 @@ class CreateFacultyPublicationTable extends Migration
       Schema::create('faculty_publication', function (Blueprint $table) {
           $table->increments('id');
           $table->string('faculty_id');
+          $table->string('authors');
           $table->string('year_of_publication');
           $table->string('article_title');
           $table->string('type');

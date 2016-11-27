@@ -9,6 +9,8 @@ use Redirect;
 use File;
 use App\User;
 use App\Models\Instructor;
+use App\Models\FacultyPublication;
+use App\Models\FacultyProjectFunding;
 use App\Http\Requests;
 use Validator;
 use App\Http\Controllers\Controller;
@@ -33,7 +35,7 @@ class FacultyController extends Controller
     {
         $this->middleware('auth');
         $this->middleware('hod',['only'=>['getAdd','getDelete','postDelete']]);
-        $this->middleware('faculty',['only'=>['getEdit','postEdit']]);
+        $this->middleware('faculty',['only'=>['getEdit','postEdit','getAll']]);
 
     }
 
@@ -126,6 +128,35 @@ class FacultyController extends Controller
         ];
         //render the object if everything was fine.
         return view('faculty.profile',$data);
+    }
+
+    public function getAll()
+    {
+
+        $currentuser = Auth::user();
+        if($currentuser->isFaculty()) //user is faculty, prepare object for rendering
+        {
+            $instructor = Instructor::find($currentuser->username);
+            $instructor['name'] = $currentuser->name;
+            $instructor['email'] = $currentuser->email;
+            $publication = FacultyPublication::all();
+            $projectfunding = FacultyProjectFunding::all();
+            $mycourses = $instructor->courses->pluck('course_code');
+        }
+        else //user is not a faculty, return 404
+        {
+            abort(404,'Faculty Not Found');
+        }
+
+        $data = [
+            'instructor'=>$instructor,
+            'courses'=>$mycourses,
+            'noAdd'=>true,
+            'publications'=>$publication,
+            'projectfunding' => $projectfunding,
+        ];
+        //render the object if everything was fine.
+        return view('faculty.all',$data);
     }
 
     public function getEdit()

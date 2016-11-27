@@ -6,6 +6,7 @@
         <div class="list-group">
             <ul>
                 <li class="list-group-item"><a href='{{{url('/faculty')}}}'>Faculty Index</a></li>
+                <li class="list-group-item"><a href='{{{url('/faculty/all')}}}'>Department Profile</a></li>
                  @if(Auth::check() && Auth::user()->role == 'hod')
                     <li class="list-group-item"><a href='{{{url('/faculty/add')}}}'>Add Faculty</a></li>
                     <li class="list-group-item"><a href='{{{url('/faculty/delete')}}}'>Delete Faculty</a></li>
