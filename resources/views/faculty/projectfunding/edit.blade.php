@@ -7,7 +7,7 @@
 		<div class="col-md-8">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-				   Edit Event
+				   Edit Project Funding
 				</div>
 				<div class="panel-body">
 					@if (count($errors) > 0)
@@ -21,37 +21,22 @@
 						</div>
 					@endif
 					<p id="jserror" class="alert alert-danger" style="display:none;"></p>
-					<form class="form-horizontal" role="form"  enctype="multipart/form-data" method="POST" action="{{ url('/faculty/events/edit') }}">
+					<form class="form-horizontal" role="form"  enctype="multipart/form-data" method="POST" action="{{ url('/faculty/projectfunding/edit/') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="hidden" name="faculty_id" value="{{ $current->faculty_id }}">
-            <input type="hidden" name="id" value="{{ $current->id  }}">
 
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">Title</label>
+							<label class="col-md-4 control-label">Project Title</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="title" value="{{ $current->title or old('title') }}">
+								<input type="text" class="form-control" name="project_title" value="{{ $current->project_title or old('project_title') }}">
 							</div>
 						</div>
 
             <div class="form-group">
-							<label class="col-md-4 control-label">Type</label>
+							<label class="col-md-4 control-label">Funding Agency</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="type" value="{{ $current->type or old('type') }}">
-							</div>
-						</div>
-
-            <div class="form-group">
-							<label class="col-md-4 control-label">Organisation</label>
-							<div class="col-md-6">
-								<input type="text" class="form-control" name="organisation" value="{{ $current->organisation or old('organisation') }}">
-							</div>
-						</div>
-
-            <div class="form-group">
-							<label class="col-md-4 control-label">Location</label>
-							<div class="col-md-6">
-								<input type="text" class="form-control" name="location" value="{{ $current->location or old('location') }}">
+								<input type="text" class="form-control" name="funding_agency" value="{{ $current->funding_agency or old('funding_agency') }}">
 							</div>
 						</div>
 
@@ -63,9 +48,9 @@
 						</div>
 
             <div class="form-group">
-							<label class="col-md-4 control-label">Report Link</label>
+							<label class="col-md-4 control-label">Amount</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="report_link" value="{{ $current->report_link or old('report_link') }}">
+								<input type="text" class="form-control" name="amount" value="{{ $current->amount or old('amount') }}">
 							</div>
 						</div>
 
@@ -76,6 +61,7 @@
 								</button>
 							</div>
 						</div>
+
 					</form>
 				</div>
 			</div>

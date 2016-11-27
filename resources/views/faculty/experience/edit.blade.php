@@ -7,7 +7,7 @@
 		<div class="col-md-8">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-				   Edit Event
+				   Edit Experience
 				</div>
 				<div class="panel-body">
 					@if (count($errors) > 0)
@@ -21,58 +21,50 @@
 						</div>
 					@endif
 					<p id="jserror" class="alert alert-danger" style="display:none;"></p>
-					<form class="form-horizontal" role="form"  enctype="multipart/form-data" method="POST" action="{{ url('/faculty/events/edit') }}">
+					<form class="form-horizontal" role="form"  enctype="multipart/form-data" method="POST" action="{{ url('/faculty/experience/edit') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="hidden" name="faculty_id" value="{{ $current->faculty_id }}">
-            <input type="hidden" name="id" value="{{ $current->id  }}">
-
+						<input type="hidden" name="id" value="{{ $current->id }}">
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">Title</label>
+							<label class="col-md-4 control-label">Organization</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="title" value="{{ $current->title or old('title') }}">
+								<input type="text" class="form-control" name="organization" value="{{ $current->organization or old('organization') }}">
 							</div>
 						</div>
 
-            <div class="form-group">
+						<div class="form-group">
 							<label class="col-md-4 control-label">Type</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="type" value="{{ $current->type or old('type') }}">
+							    	<input type="text" class="form-control" placeholder="Ex. Industry, Teaching, Non Teaching, etc." name="type" value="{{ $current->type or old('type') }}">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">Role/Title</label>
+							<div class="col-md-6">
+							    <input type="text" class="form-control" name="role" value="{{ $current->role or old('role') }}">
 							</div>
 						</div>
 
             <div class="form-group">
-							<label class="col-md-4 control-label">Organisation</label>
+							<label class="col-md-4 control-label">Description</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="organisation" value="{{ $current->organisation or old('organisation') }}">
-							</div>
-						</div>
-
-            <div class="form-group">
-							<label class="col-md-4 control-label">Location</label>
-							<div class="col-md-6">
-								<input type="text" class="form-control" name="location" value="{{ $current->location or old('location') }}">
+							    <textarea class="form-control" style="width:100%; height: 250px;" name="description">{{$current->description or old('description')}}</textarea>
 							</div>
 						</div>
 
             <div class="form-group">
 							<label class="col-md-4 control-label">Duration</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="duration" value="{{ $current->duration or old('duration') }}">
-							</div>
-						</div>
-
-            <div class="form-group">
-							<label class="col-md-4 control-label">Report Link</label>
-							<div class="col-md-6">
-								<input type="text" class="form-control" name="report_link" value="{{ $current->report_link or old('report_link') }}">
+								<input type="text" class="form-control" name="duration" value="{{$current->duration or old('duration') }}">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
 								<button type="submit" class="btn btn-primary">
-									Edit Details
+									Edit details
 								</button>
 							</div>
 						</div>

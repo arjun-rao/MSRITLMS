@@ -24,11 +24,12 @@
 					<form class="form-horizontal" role="form"  enctype="multipart/form-data" method="POST" action="{{ url('/faculty/industry/edit') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
             	<input type="hidden" name="faculty_id" value="{{ $current->faculty_id }}">
+            	<input type="hidden" name="id" value="{{ $current->id  }}">
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Organization</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="name" value="{{ $current->name or old('name') }}">
+								<input type="text" class="form-control" name="organization" value="{{ $current->organization or old('organization') }}">
 							</div>
 						</div>
 
@@ -42,14 +43,14 @@
             <div class="form-group">
 							<label class="col-md-4 control-label">Duration</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="name" value="{{ $current->duration or old('duration') }}">
+								<input type="text" class="form-control" name="duration" value="{{ $current->duration or old('duration') }}">
 							</div>
 						</div>
 
             <div class="form-group">
               <label class="col-md-4 control-label">Report Link</label>
               <div class="col-md-6">
-                <input type="text" class="form-control" name="name" value="{{ $current->report_link or old('report_link') }}">
+                <input type="text" class="form-control" name="report_link" value="{{ $current->report_link or old('report_link') }}">
               </div>
             </div>
 
@@ -60,7 +61,6 @@
 								</button>
 							</div>
 						</div>
-						<p>* Uploading new image is optional, ensure file size is less than 100 KB</p>
 					</form>
 				</div>
 			</div>

@@ -7,7 +7,7 @@
 		<div class="col-md-8">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-				   Add a New Event
+				   Add Work Experience
 				</div>
 				<div class="panel-body">
 					@if (count($errors) > 0)
@@ -21,36 +21,35 @@
 						</div>
 					@endif
 					<p id="jserror" class="alert alert-danger" style="display:none;"></p>
-					<form class="form-horizontal" role="form"  enctype="multipart/form-data" method="POST" action="{{ url('/faculty/events/add') }}">
+					<form class="form-horizontal" role="form"  enctype="multipart/form-data" method="POST" action="{{ url('/faculty/experience/add') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type="hidden" name="faculty_id" value="{{ Auth::user()->username }}">
-
+            	<input type="hidden" name="faculty_id" value="{{ Auth::user()->username }}">
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">Title</label>
+							<label class="col-md-4 control-label">Organization</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="title" value="{{ old('title') }}">
+								<input type="text" class="form-control" name="organization" value="{{ old('organization') }}">
 							</div>
 						</div>
 
-            <div class="form-group">
+						<div class="form-group">
 							<label class="col-md-4 control-label">Type</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="type" value="{{ old('type') }}">
+							    	<input type="text" class="form-control" placeholder="Ex. Industry, Teaching, Non Teaching, etc." name="type" value="{{ old('type') }}">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">Role/Title</label>
+							<div class="col-md-6">
+							    <input type="text" class="form-control" name="role" value="{{ old('role') }}">
 							</div>
 						</div>
 
             <div class="form-group">
-							<label class="col-md-4 control-label">Organisation</label>
+							<label class="col-md-4 control-label">Description</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="organisation" value="{{ old('organisation') }}">
-							</div>
-						</div>
-
-            <div class="form-group">
-							<label class="col-md-4 control-label">Location</label>
-							<div class="col-md-6">
-								<input type="text" class="form-control" name="location" value="{{ old('location') }}">
+							    <textarea class="form-control" style="width:100%; height: 250px;" name="description">{{old('description')}}</textarea>
 							</div>
 						</div>
 
@@ -58,13 +57,6 @@
 							<label class="col-md-4 control-label">Duration</label>
 							<div class="col-md-6">
 								<input type="text" class="form-control" name="duration" value="{{ old('duration') }}">
-							</div>
-						</div>
-
-            <div class="form-group">
-							<label class="col-md-4 control-label">Report Link</label>
-							<div class="col-md-6">
-								<input type="text" class="form-control" name="report_link" value="{{ old('report_link') }}">
 							</div>
 						</div>
 
