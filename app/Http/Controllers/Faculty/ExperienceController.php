@@ -82,8 +82,8 @@ class ExperienceController extends Controller
         // update 'type','role', 'description', 'duration','organization'
 
         //update experience details
-        if(Input::get('organisation') != $experience->organisation)
-            $experience->organisation = Input::get('organisation');
+        if(Input::get('organization') != $experience->organization)
+            $experience->organization = Input::get('organization');
         if(Input::get('description') != $experience->description)
             $experience->description = Input::get('description');
         if(Input::get('duration') != $experience->duration)

@@ -34,7 +34,7 @@ class FacultyController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('hod',['only'=>['getAdd','getDelete','postDelete']]);
+        $this->middleware('hod',['only'=>['getAdd','postAdd','getDelete','postDelete']]);
         $this->middleware('faculty',['only'=>['getEdit','postEdit','getAll']]);
 
     }
@@ -177,7 +177,30 @@ class FacultyController extends Controller
 
     public function getAdd()
     {
-        return view('auth.register');
+        return view('auth.facultyregister');
+    }
+
+    public function postAdd()
+    {
+
+        $newUser =  User::create([
+            'name' => Input::get('name'),
+            'username'=> Input::get('username'),
+            'email' => Input::get('email'),
+            'password' => bcrypt(Input::get('password')),
+            'role' => 'faculty',
+            'semester'=> 0,
+        ]);
+
+        Instructor::create([
+            'username'=> Input::get('username'),
+            'department_code' => 'IS',
+            'designation' => 'To Be Updated',
+            'qualification' => 'To Be Updated',
+            'researcharea' => 'To Be Updated',
+        ]);
+
+        return Redirect::to('/faculty');
     }
 
     public function getDelete($username = 'null')
