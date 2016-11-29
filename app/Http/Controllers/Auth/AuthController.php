@@ -73,7 +73,6 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-      $newrole = 'student';
       if (Auth::check() && Auth::user()->role == 'hod')
       {
           $newrole  = 'faculty';
@@ -87,18 +86,19 @@ class AuthController extends Controller
               'semester'=> 0,
           ]);
 
-        /*  Instructor::create([
+        Instructor::create([
               'username'=> $data['username'],
               'department_code' => 'IS',
               'designation' => 'To Be Updated',
               'qualification' => 'To Be Updated',
               'researcharea' => 'To Be Updated',
-          ]);*/
+          ]);
 
           $this->redirectTo = '/faculty';
       }
       else
       {
+          $newrole = 'student';
           $newUser =  User::create([
               'name' => $data['name'],
               'username'=> $data['username'],
