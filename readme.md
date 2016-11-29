@@ -67,10 +67,10 @@ Run:
 6) Change .env.example file to .env and set database params
    Copy app.php and database.php from config/backup to config/ and change the respective parameters - for key and database
    use php artisan generate:key
+   
 7) change parameters in config/database.php to match database
-8) Create db seed (for at least user’s table, dept table, and pages for department home (parent_code = NULL) and ensure migrations are correct
 
-8) run 
+8) Create db seed (for at least user’s table, dept table, and pages for department home (parent_code = NULL) and ensure migrations are correct, run 
 
     php artisan optimize
 	
